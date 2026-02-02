@@ -1,0 +1,62 @@
+---
+// Features section component
+const features = [
+  {
+    title: 'Lightning Fast',
+    description: 'Optimized performance ensures your business runs at maximum speed with minimal load times.',
+    icon: '⚡',
+  },
+  {
+    title: 'Secure & Reliable',
+    description: 'Enterprise-grade security with 99.9% uptime guarantee to keep your data safe and accessible.',
+    icon: '🔒',
+  },
+  {
+    title: 'Easy Integration',
+    description: 'Seamlessly integrate with your existing tools and workflows in minutes, not weeks.',
+    icon: '🔌',
+  },
+  {
+    title: 'Analytics Dashboard',
+    description: 'Gain valuable insights with our comprehensive analytics and reporting tools.',
+    icon: '📊',
+  },
+  {
+    title: '24/7 Support',
+    description: 'Our dedicated support team is always ready to help you succeed, anytime, anywhere.',
+    icon: '💬',
+  },
+  {
+    title: 'Scalable Solution',
+    description: 'Grow your business without limits. Our platform scales effortlessly with your needs.',
+    icon: '📈',
+  },
+];
+---
+
+<section id="features" class="py-20 bg-white dark:bg-gray-900">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        Powerful Features
+      </h2>
+      <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        Everything you need to succeed, all in one place
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {features.map((feature) => (
+        <div class="group p-8 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400">
+          <div class="text-5xl mb-4">{feature.icon}</div>
+          <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-3">
+            {feature.title}
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400">
+            {feature.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
